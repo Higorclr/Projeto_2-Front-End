@@ -1,0 +1,197 @@
+:root {
+  --cor-fundo: #121822;
+  --cor-fundo-container: #1a2230;
+  --cor-borda: #3c4d69;
+  --cor-texto-principal: #e1e8f2;
+  --cor-texto-secundario: #8a99b0;
+  --cor-primaria: #3498db;
+  --cor-primaria-hover: #5dade2;
+  --cor-sucesso: #2ecc71;
+  --cor-erro: #e74c3c;
+  --cor-aviso: #f39c12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.botoes-navegacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.botoes-navegacao button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botoes-navegacao button:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+#conteudo {
+  background-color: var(--cor-fundo-container);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 2.5rem; /* Aumentado o padding */
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+#conteudo > * + * {
+  margin-top: 1.25rem;
+}
+
+#conteudo h2 {
+  margin-bottom: 0.5rem;
+  margin-top: 0; /* Reseta a margem do título */
+  color: var(--cor-primaria);
+}
+
+#conteudo p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin-top: 0.5rem; /* Ajusta a margem do parágrafo */
+}
+
+/* ========================================= */
+/* --- ESTILOS: Jogo de Adivinhação --- */
+/* ========================================= */
+#chuteInput {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: 2px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+}
+#chuteInput:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+#btnVerificar {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--cor-aviso);
+}
+#btnVerificar:hover {
+  background-color: #f1c40f;
+}
+#resultadoJogo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ========================================= */
+/* --- ESTILOS: Formulário para TXT --- */
+/* ========================================= */
+#formularioTXT fieldset {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+}
+#formularioTXT legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: var(--cor-texto-secundario);
+}
+#formularioTXT label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+#formularioTXT input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-principal);
+}
+#btnSalvarTxt {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--cor-sucesso);
+}
+#btnSalvarTxt:hover {
+  background-color: #27ae60;
+}
+
+/* ========================================= */
+/* --- ESTILOS: Métodos de Array (Frutas) --- */
+/* ========================================= */
+#frutaInput {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-principal);
+  padding: 12px;
+  border-radius: 6px;
+  width: calc(100% - 130px); /* Largura do input menos a largura do botão */
+  margin-right: 10px;
+}
+#btnAdicionarFruta {
+  width: 120px;
+}
+.display-array {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--cor-fundo);
+  color: #a7c7e7; /* Azul claro para o texto do array */
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  word-wrap: break-word;
+}
+#botoes-metodos button {
+  background-color: var(--cor-fundo-container);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-secundario);
+}
+#botoes-metodos button:hover {
+  background-color: var(--cor-borda);
+  color: var(--cor-texto-principal);
+}
+
+/* ========================================= */
+/* --- RESPONSIVIDADE --- */
+/* ========================================= */
+@media (max-width: 768px) {
+  .botoes-navegacao {
+      width: 100%;
+  }
+}
